@@ -4,4 +4,3 @@ node_modules/
 public/data/steam-charts.json
 .github/logs/
 *.log
-package-lock.json
