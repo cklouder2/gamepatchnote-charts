@@ -229,3 +229,39 @@ jobs:
             git push || true
             echo "📊 Charts data committed and pushed"
           fi
+      
+      # Push to main repository
+      - name: Push to Main Repository
+        if: success()
+        env:
+          MAIN_REPO_TOKEN: ${{ secrets.MAIN_REPO_TOKEN }}
+        run: |
+          if [ -z "$MAIN_REPO_TOKEN" ]; then
+            echo "⚠️ MAIN_REPO_TOKEN not set, skipping push to main repo"
+            exit 0
+          fi
+          
+          echo "📤 Pushing charts data to main repository..."
+          
+          # Clone main repo
+          git clone https://${MAIN_REPO_TOKEN}@github.com/cklouder2/gamepatchnote.git main-repo
+          
+          # Copy charts data
+          mkdir -p main-repo/public/data
+          cp public/data/steam-charts.json main-repo/public/data/
+          
+          # Commit and push
+          cd main-repo
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action (Charts Sync)"
+          
+          git add public/data/steam-charts.json
+          
+          if git diff --staged --quiet; then
+            echo "📊 No changes to push to main repo"
+          else
+            GAME_COUNT=$(jq '.charts | length' ../public/data/steam-charts.json 2>/dev/null || echo "0")
+            git commit -m "Update Steam charts data from public workflow - $GAME_COUNT games"
+            git push
+            echo "✅ Charts data pushed to main repository"
+          fi
