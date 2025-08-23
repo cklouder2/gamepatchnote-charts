@@ -1,0 +1,231 @@
+name: Steam Charts Sync - Ultra Fast
+
+on:
+  schedule:
+    # Every 5 minutes for real-time charts data
+    - cron: '*/5 * * * *'
+  
+  workflow_dispatch:
+    inputs:
+      debug_mode:
+        description: 'Enable debug logging'
+        required: false
+        default: false
+        type: boolean
+      limit_games:
+        description: 'Limit number of games to process (for testing)'
+        required: false
+        default: '0'
+        type: string
+
+env:
+  NODE_VERSION: '20'
+  SUPABASE_URL: ${{ secrets.SUPABASE_URL || 'https://qsogipycvqmnwwxrcfru.supabase.co' }}
+  SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzb2dpcHljdnFtbnd3eHJjZnJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ4ODYzMTksImV4cCI6MjA3MDQ2MjMxOX0.4cGQXlNCxY7Ac8XokbRRJjmrG9W8vPnrHki7uLWAVAI' }}
+
+jobs:
+  sync-charts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+          sparse-checkout: |
+            .github/scripts/fetch-steam-charts.js
+            package.json
+            package-lock.json
+            public/data/
+      
+      - name: Setup Node.js with cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      # Cache node_modules for faster installs
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        id: npm-cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      
+      - name: Install dependencies (minimal)
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: |
+          echo "📦 Installing minimal dependencies..."
+          npm ci --prefer-offline --no-audit --no-fund --omit=dev
+      
+      # Cache previous charts data for comparison
+      - name: Cache charts data
+        uses: actions/cache@v3
+        with:
+          path: public/data/steam-charts.prev.json
+          key: charts-prev-${{ github.run_id }}
+          restore-keys: |
+            charts-prev-
+      
+      - name: Prepare previous data
+        run: |
+          if [ -f "public/data/steam-charts.json" ]; then
+            cp public/data/steam-charts.json public/data/steam-charts.prev.json
+            echo "📋 Previous charts data backed up"
+          else
+            echo "📋 No previous charts data found"
+          fi
+      
+      - name: Sync Steam Charts Data
+        id: charts-sync
+        env:
+          DEBUG_MODE: ${{ github.event.inputs.debug_mode }}
+          LIMIT_GAMES: ${{ github.event.inputs.limit_games }}
+          NODE_OPTIONS: '--max-old-space-size=4096'
+        run: |
+          echo "📊 Starting optimized charts sync (Top 10,000 games)..."
+          START_TIME=$(date +%s)
+          
+          mkdir -p public/data .github/logs
+          
+          # Set environment variables for optimization
+          export CONCURRENT_REQUESTS=100
+          export BATCH_SIZE=1000
+          export RATE_LIMIT_DELAY=2
+          
+          if [ "$LIMIT_GAMES" != "0" ] && [ -n "$LIMIT_GAMES" ]; then
+            echo "🎮 Limited mode: Processing only $LIMIT_GAMES games"
+          fi
+          
+          # Run with timeout and capture both stdout and stderr
+          if timeout 3600 node .github/scripts/fetch-steam-charts.js 2>&1 | tee .github/logs/sync.log; then
+            echo "✅ Charts sync completed successfully"
+            SYNC_STATUS="success"
+            
+            # Check file size
+            if [ -f "public/data/steam-charts.json" ]; then
+              FILE_SIZE=$(du -h public/data/steam-charts.json | cut -f1)
+              echo "📦 File size: $FILE_SIZE"
+              echo "file_size=$FILE_SIZE" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "❌ Charts sync failed or timed out"
+            SYNC_STATUS="failure"
+            
+            # Show last 20 lines of error log
+            if [ -f ".github/logs/sync.log" ]; then
+              echo "📋 Last log entries:"
+              tail -20 .github/logs/sync.log
+            fi
+            
+            exit 1
+          fi
+          
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+          
+          echo "⏱️  Duration: ${DURATION}s"
+          echo "status=$SYNC_STATUS" >> $GITHUB_OUTPUT
+          echo "duration=$DURATION" >> $GITHUB_OUTPUT
+      
+      - name: Validate charts data
+        if: success()
+        run: |
+          if [ -f "public/data/steam-charts.json" ]; then
+            # Check if file is valid JSON
+            if jq empty public/data/steam-charts.json 2>/dev/null; then
+              GAME_COUNT=$(jq '.charts | length' public/data/steam-charts.json)
+              TOTAL_PLAYERS=$(jq '.metadata.totalPlayers' public/data/steam-charts.json)
+              echo "✅ Valid JSON with $GAME_COUNT games"
+              echo "👥 Total players: $TOTAL_PLAYERS"
+            else
+              echo "❌ Invalid JSON file"
+              exit 1
+            fi
+          else
+            echo "❌ Charts file not found"
+            exit 1
+          fi
+      
+      - name: Upload charts data
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: charts-data-${{ github.run_number }}
+          path: |
+            public/data/steam-charts.json
+            .github/logs/steam-charts*.json
+          retention-days: 1
+      
+      - name: Generate Summary
+        if: always()
+        run: |
+          echo "## 📊 Steam Charts Sync Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| **Status** | ${{ steps.charts-sync.outputs.status }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Duration** | ${{ steps.charts-sync.outputs.duration }}s |" >> $GITHUB_STEP_SUMMARY
+          echo "| **File Size** | ${{ steps.charts-sync.outputs.file_size }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Timestamp** | $(date --utc) |" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f "public/data/steam-charts.json" ]; then
+            GAME_COUNT=$(jq '.charts | length' public/data/steam-charts.json 2>/dev/null || echo "0")
+            echo "| **Games Processed** | $GAME_COUNT |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.charts-sync.outputs.status }}" = "success" ]; then
+            echo "### ✅ Charts data updated successfully" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ❌ Charts sync failed" >> $GITHUB_STEP_SUMMARY
+            
+            if [ -f ".github/logs/sync.log" ]; then
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "<details>" >> $GITHUB_STEP_SUMMARY
+              echo "<summary>Error Log (last 10 lines)</summary>" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              tail -10 .github/logs/sync.log >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              echo "</details>" >> $GITHUB_STEP_SUMMARY
+            fi
+          fi
+      
+      # Don't commit large files to git
+      - name: Check file size before commit
+        if: success()
+        id: check-size
+        run: |
+          FILE_SIZE_BYTES=$(stat -c%s public/data/steam-charts.json 2>/dev/null || echo "0")
+          FILE_SIZE_MB=$((FILE_SIZE_BYTES / 1048576))
+          
+          if [ $FILE_SIZE_MB -gt 50 ]; then
+            echo "⚠️  File too large for git ($FILE_SIZE_MB MB), skipping commit"
+            echo "should_commit=false" >> $GITHUB_OUTPUT
+          else
+            echo "✅ File size OK ($FILE_SIZE_MB MB), can commit"
+            echo "should_commit=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit charts data
+        if: success() && steps.check-size.outputs.should_commit == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          git add public/data/steam-charts.json 2>/dev/null || true
+          
+          if git diff --staged --quiet; then
+            echo "📊 No changes in charts data"
+          else
+            GAME_COUNT=$(jq '.charts | length' public/data/steam-charts.json 2>/dev/null || echo "0")
+            git commit -m "Update Steam charts data - $GAME_COUNT games - $(date --utc)" || true
+            git push || true
+            echo "📊 Charts data committed and pushed"
+          fi
