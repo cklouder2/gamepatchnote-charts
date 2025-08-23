@@ -18,6 +18,9 @@ on:
         default: '0'
         type: string
 
+permissions:
+  contents: write
+
 env:
   NODE_VERSION: '20'
   SUPABASE_URL: ${{ secrets.SUPABASE_URL || 'https://qsogipycvqmnwwxrcfru.supabase.co' }}
@@ -223,18 +226,24 @@ jobs:
       - name: Commit charts data
         if: success() && steps.check-size.outputs.should_commit == 'true'
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           
-          git add public/data/steam-charts.json 2>/dev/null || true
+          # Ensure we're on the right branch
+          git status
           
-          if git diff --staged --quiet; then
+          # Add the file
+          git add public/data/steam-charts.json
+          
+          # Check if there are changes
+          if git diff --cached --quiet; then
             echo "📊 No changes in charts data"
           else
             GAME_COUNT=$(jq '.charts | length' public/data/steam-charts.json 2>/dev/null || echo "0")
-            git commit -m "Update Steam charts data - $GAME_COUNT games - $(date --utc)" || true
-            git push || true
-            echo "📊 Charts data committed and pushed"
+            COMMIT_MSG="Update Steam charts data - $GAME_COUNT games - $(date --utc '+%Y-%m-%d %H:%M:%S UTC')"
+            git commit -m "$COMMIT_MSG"
+            git push origin HEAD:${GITHUB_REF#refs/heads/}
+            echo "✅ Charts data committed and pushed"
           fi
       
       # Push to main repository
