@@ -187,15 +187,14 @@ class SteamChartsSync {
     }
 
     try {
-      // First, try to get games that already have player data (most popular)
-      // Only get games with valid numeric appIds
+      // Get ALL games from database, sorted by currentPlayers (if any)
+      // We'll fetch player counts for all of them
       const { data: popularGames, error: popularError } = await this.supabase
         .from('Game')
         .select('appId, currentPlayers')
-        .gt('currentPlayers', 0)
         .not('appId', 'like', '%popular%')  // Exclude invalid appIds
         .not('appId', 'like', '%test%')     // Exclude test entries
-        .order('currentPlayers', { ascending: false })
+        .order('currentPlayers', { ascending: false, nullsLast: true })
         .limit(10000);
         
       if (popularError) {
@@ -204,26 +203,9 @@ class SteamChartsSync {
       
       let allGames = popularGames || [];
       
-      // If we have less than 10,000, fill with more games
+      // If we have less than 10,000, we're done (database has less than 10k games)
       if (allGames.length < 10000) {
-        const remaining = 10000 - allGames.length;
-        const popularAppIds = new Set(allGames.map(g => g.appId));
-        
-        const { data: additionalGames, error: additionalError } = await this.supabase
-          .from('Game')
-          .select('appId')
-          .order('name')
-          .limit(remaining * 2); // Get extra to filter
-          
-        if (additionalError) {
-          this.log(`Error fetching additional games: ${additionalError.message}`, 'warn');
-        } else if (additionalGames) {
-          // Add games not already in the list
-          const newGames = additionalGames
-            .filter(g => !popularAppIds.has(g.appId))
-            .slice(0, remaining);
-          allGames = allGames.concat(newGames);
-        }
+        this.log(`Database has only ${allGames.length} games (less than 10,000 limit)`);
       }
       
       // Ensure we don't exceed 10,000 games
