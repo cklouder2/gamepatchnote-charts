@@ -24,4 +24,4 @@ The workflow runs automatically every 5 minutes and:
 4. Can be integrated with main project
 
 ## Status
-![Workflow Status](https://github.com/cklouder2/gamepatchnote-charts/workflows/Steam%20Charts%20Sync%20-%20Ultra%20Fast/badge.svg)
+![Workflow Status](https://github.com/cklouder2/gamepatchnote-charts/workflows/Steam%20Charts%20Sync%20-%20Ultra%20Fast/badge.svg)# Test
