@@ -188,10 +188,13 @@ class SteamChartsSync {
 
     try {
       // First, try to get games that already have player data (most popular)
+      // Only get games with valid numeric appIds
       const { data: popularGames, error: popularError } = await this.supabase
         .from('Game')
         .select('appId, currentPlayers')
         .gt('currentPlayers', 0)
+        .not('appId', 'like', '%popular%')  // Exclude invalid appIds
+        .not('appId', 'like', '%test%')     // Exclude test entries
         .order('currentPlayers', { ascending: false })
         .limit(10000);
         
@@ -239,6 +242,12 @@ class SteamChartsSync {
     const chartsData = {};
     
     for (const game of games) {
+      // Skip invalid appIds
+      if (!game.appId || isNaN(parseInt(game.appId))) {
+        this.log(`Skipping invalid appId: ${game.appId}`, 'warn');
+        continue;
+      }
+      
       const stats = playerStatsMap.get(game.appId) || {};
       const currentPlayers = stats.currentPlayers || 0;
       
