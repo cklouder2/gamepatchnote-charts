@@ -202,7 +202,14 @@ jobs:
         if: success()
         id: check-size
         run: |
-          FILE_SIZE_BYTES=$(stat -c%s public/data/steam-charts.json 2>/dev/null || echo "0")
+          # Ensure file exists before checking size
+          if [ ! -f "public/data/steam-charts.json" ]; then
+            echo "❌ File not found: public/data/steam-charts.json"
+            echo "should_commit=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          FILE_SIZE_BYTES=$(stat -c%s public/data/steam-charts.json)
           FILE_SIZE_MB=$((FILE_SIZE_BYTES / 1048576))
           
           if [ $FILE_SIZE_MB -gt 50 ]; then
