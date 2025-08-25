@@ -1,9 +1,9 @@
-name: 🔥 Aggressive Steam Charts Sync - 10,000+ Games
+name: 🎮 SteamSpy Data Sync - 20,000+ Active Games
 
 on:
   schedule:
-    # Run every 6 hours for aggressive updates
-    - cron: '0 */6 * * *'
+    # Run every 2 hours for up-to-date data
+    - cron: '0 */2 * * *'
   workflow_dispatch:
     # Allow manual trigger with parameters
     inputs:
@@ -14,25 +14,19 @@ on:
       target_games:
         description: 'Target games to fetch'
         required: false
-        default: '50000'
-      concurrent_requests:
-        description: 'Concurrent requests'
-        required: false
-        default: '500'
+        default: '20000'
 
 permissions:
   contents: write
 
 jobs:
-  aggressive-steam-sync:
+  steamspy-sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 30  # Extended from 15 minutes
+    timeout-minutes: 15  # SteamSpy is faster
     
     env:
       MIN_GAMES: ${{ inputs.min_games || '10000' }}
-      TARGET_GAMES: ${{ inputs.target_games || '50000' }}
-      CONCURRENT_REQUESTS: ${{ inputs.concurrent_requests || '500' }}
-      AGGRESSIVE_MODE: true
+      TARGET_GAMES: ${{ inputs.target_games || '20000' }}
       NODE_ENV: production
     
     steps:
@@ -48,16 +42,15 @@ jobs:
     - name: 🔧 Install dependencies
       run: npm ci
       
-    - name: 🔥 Fetch Steam Charts Data (AGGRESSIVE MODE)
+    - name: 🚀 Fetch SteamSpy Data
       run: |
-        echo "🎯 Starting aggressive Steam data fetch..."
+        echo "🎯 Starting SteamSpy data fetch..."
         echo "📊 Minimum games: $MIN_GAMES"
         echo "🚀 Target games: $TARGET_GAMES"
-        echo "⚡ Concurrent requests: $CONCURRENT_REQUESTS"
-        echo "⏰ Timeout: 30 minutes"
+        echo "⏰ Timeout: 10 minutes"
         echo "=================================="
-        node .github/scripts/fetch-steam-charts.js
-      timeout-minutes: 28  # Leave buffer for cleanup
+        node .github/scripts/fetch-steamspy-data.js
+      timeout-minutes: 10
         
     - name: 📊 Validate Results
       run: |
@@ -96,7 +89,7 @@ jobs:
     - name: 📝 Commit and push changes
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action - Aggressive Sync"
+        git config --local user.name "GitHub Action - SteamSpy Sync"
         
         # Add any changes to public/data/
         git add public/data/
@@ -114,12 +107,11 @@ jobs:
             }
           ")
           
-          git commit -m "🔥 Aggressive sync: $GAME_COUNT - $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          git commit -m "🎮 SteamSpy sync: $GAME_COUNT - $(date -u '+%Y-%m-%d %H:%M:%S UTC')
           
           📊 Target: $TARGET_GAMES games
-          ⚡ Concurrency: $CONCURRENT_REQUESTS requests
           🎯 Min requirement: $MIN_GAMES games
-          🤖 Mode: Aggressive multi-source fetching"
+          🤖 Source: SteamSpy API (active games only)"
           
           git push
           echo "✅ Changes committed and pushed"

@@ -1,10 +1,11 @@
 {
   "name": "gamepatchnote-charts",
-  "version": "2.0.0",
-  "description": "Steam Charts sync for GamePatchNote - Direct API Integration",
+  "version": "3.0.0",
+  "description": "SteamSpy Data Sync for GamePatchNote - 20,000+ Active Games",
   "scripts": {
-    "sync": "node .github/scripts/fetch-steam-charts.js",
-    "test": "node .github/scripts/fetch-steam-charts.js"
+    "sync": "node .github/scripts/fetch-steamspy-data.js",
+    "sync-old": "node .github/scripts/fetch-steam-charts.js",
+    "test": "node .github/scripts/fetch-steamspy-data.js"
   },
   "dependencies": {
     "dotenv": "^16.3.1"
