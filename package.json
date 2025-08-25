@@ -1,13 +1,15 @@
 {
   "name": "gamepatchnote-charts",
-  "version": "1.0.0",
-  "description": "Steam Charts sync for GamePatchNote",
+  "version": "2.0.0",
+  "description": "Steam Charts sync for GamePatchNote - Direct API Integration",
   "scripts": {
-    "sync": "node .github/scripts/fetch-steam-charts.js"
+    "sync": "node .github/scripts/fetch-steam-charts.js",
+    "test": "node .github/scripts/fetch-steam-charts.js"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.39.1",
-    "axios": "^1.6.2",
     "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
