@@ -1,51 +1,130 @@
-name: Steam Charts Sync
+name: 🔥 Aggressive Steam Charts Sync - 10,000+ Games
 
 on:
   schedule:
-    # Run every hour
-    - cron: '0 * * * *'
+    # Run every 6 hours for aggressive updates
+    - cron: '0 */6 * * *'
   workflow_dispatch:
-    # Allow manual trigger
+    # Allow manual trigger with parameters
+    inputs:
+      min_games:
+        description: 'Minimum games required'
+        required: false
+        default: '10000'
+      target_games:
+        description: 'Target games to fetch'
+        required: false
+        default: '50000'
+      concurrent_requests:
+        description: 'Concurrent requests'
+        required: false
+        default: '500'
 
 permissions:
   contents: write
 
 jobs:
-  sync-steam-charts:
+  aggressive-steam-sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # Extended from 15 minutes
+    
+    env:
+      MIN_GAMES: ${{ inputs.min_games || '10000' }}
+      TARGET_GAMES: ${{ inputs.target_games || '50000' }}
+      CONCURRENT_REQUESTS: ${{ inputs.concurrent_requests || '500' }}
+      AGGRESSIVE_MODE: true
+      NODE_ENV: production
     
     steps:
-    - name: Checkout repository
+    - name: 🚀 Checkout repository
       uses: actions/checkout@v4
       
-    - name: Setup Node.js
+    - name: 📦 Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'  # Updated to Node 20 for better performance
         cache: 'npm'
         
-    - name: Install dependencies
+    - name: 🔧 Install dependencies
       run: npm ci
       
-    - name: Fetch Steam Charts Data
-      run: node .github/scripts/fetch-steam-charts.js
-      env:
-        NODE_ENV: production
+    - name: 🔥 Fetch Steam Charts Data (AGGRESSIVE MODE)
+      run: |
+        echo "🎯 Starting aggressive Steam data fetch..."
+        echo "📊 Minimum games: $MIN_GAMES"
+        echo "🚀 Target games: $TARGET_GAMES"
+        echo "⚡ Concurrent requests: $CONCURRENT_REQUESTS"
+        echo "⏰ Timeout: 30 minutes"
+        echo "=================================="
+        node .github/scripts/fetch-steam-charts.js
+      timeout-minutes: 28  # Leave buffer for cleanup
         
-    - name: Commit and push changes
+    - name: 📊 Validate Results
+      run: |
+        echo "🔍 Validating fetch results..."
+        if [ -f "public/data/steam-charts.json" ]; then
+          echo "✅ Steam charts file exists"
+          # Check file size (should be substantial with 10k+ games)
+          FILE_SIZE=$(stat -f%z "public/data/steam-charts.json" 2>/dev/null || stat -c%s "public/data/steam-charts.json")
+          echo "📏 File size: $FILE_SIZE bytes"
+          if [ $FILE_SIZE -lt 100000 ]; then
+            echo "❌ WARNING: File size seems too small for 10k+ games"
+            exit 1
+          fi
+          # Check game count in JSON
+          GAME_COUNT=$(node -e "
+            const data = require('./public/data/steam-charts.json');
+            console.log(Object.keys(data.games || {}).length);
+          ")
+          echo "🎮 Games in file: $GAME_COUNT"
+          if [ $GAME_COUNT -lt $MIN_GAMES ]; then
+            echo "❌ VALIDATION FAILED: Only $GAME_COUNT games found, minimum required: $MIN_GAMES"
+            exit 1
+          fi
+          echo "✅ VALIDATION PASSED: $GAME_COUNT games (>= $MIN_GAMES required)"
+        else
+          echo "❌ Steam charts file not found!"
+          exit 1
+        fi
+        
+    - name: 🧹 Clean up temporary files
+      run: |
+        echo "🧹 Cleaning up temporary files..."
+        find public/data/ -name "steam-charts-temp-*.json" -delete 2>/dev/null || true
+        echo "✅ Cleanup completed"
+        
+    - name: 📝 Commit and push changes
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.name "GitHub Action - Aggressive Sync"
         
         # Add any changes to public/data/
         git add public/data/
         
         # Only commit if there are changes
         if ! git diff --cached --quiet; then
-          git commit -m "🔄 Update Steam charts data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          # Get stats for commit message
+          GAME_COUNT=$(node -e "
+            try {
+              const data = require('./public/data/steam-charts.json');
+              const metadata = data.metadata || {};
+              console.log(\`\${Object.keys(data.games || {}).length} games, \${metadata.totalPlayers || 0} players\`);
+            } catch(e) {
+              console.log('stats unavailable');
+            }
+          ")
+          
+          git commit -m "🔥 Aggressive sync: $GAME_COUNT - $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          
+          📊 Target: $TARGET_GAMES games
+          ⚡ Concurrency: $CONCURRENT_REQUESTS requests
+          🎯 Min requirement: $MIN_GAMES games
+          🤖 Mode: Aggressive multi-source fetching"
+          
           git push
+          echo "✅ Changes committed and pushed"
         else
-          echo "No changes to commit"
+          echo "ℹ️  No changes to commit"
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
