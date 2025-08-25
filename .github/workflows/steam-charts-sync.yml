@@ -2,8 +2,8 @@ name: 🎮 SteamSpy Data Sync - 20,000+ Active Games
 
 on:
   schedule:
-    # Run every 2 hours for up-to-date data
-    - cron: '0 */2 * * *'
+    # Run every 5 minutes for real-time data
+    - cron: '*/5 * * * *'
   workflow_dispatch:
     # Allow manual trigger with parameters
     inputs:
