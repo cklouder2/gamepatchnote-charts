@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2025-09-12T17:40:27.688Z",
+    "timestamp": "2025-09-12T17:49:16.630Z",
     "totalGames": 19061,
     "totalPlayers": 5766059,
-    "totalScanned": 86537,
-    "duration": 44.876,
+    "totalScanned": 85537,
+    "duration": 4.406,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -337414,12 +337414,10 @@
       "price": "499",
       "initialPrice": "499",
       "discount": "0",
-      "languages": "",
-      "genre": "",
-      "publisher": "Fallen Few Studios",
-      "developer": "Fallen Few Studios",
-      "tags": {},
-      "source": "steamspy",
+      "tags": {
+        "Early Access": true
+      },
+      "source": "steamspy-tag",
       "rank": 17676
     },
     "2315400": {
