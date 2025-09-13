@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2025-09-13T02:28:21.032Z",
+    "timestamp": "2025-09-13T03:04:50.547Z",
     "totalGames": 18920,
-    "totalPlayers": 5765196,
+    "totalPlayers": 5765220,
     "totalScanned": 86537,
-    "duration": 8.21,
+    "duration": 204.143,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -32,7 +32,7 @@
       "name": "Deathmatch Classic",
       "appId": 40,
       "players": 7,
-      "rank": 6538
+      "rank": 6539
     },
     {
       "name": "Half-Life: Opposing Force",
@@ -200,7 +200,7 @@
       "name": "DEFCON",
       "appId": 1520,
       "players": 8,
-      "rank": 6187
+      "rank": 6188
     },
     {
       "name": "Multiwinia",
@@ -284,7 +284,7 @@
       "name": "Wolfenstein 3D",
       "appId": 2270,
       "players": 10,
-      "rank": 5661
+      "rank": 5662
     },
     {
       "name": "DOOM + DOOM II",
@@ -362,7 +362,7 @@
       "name": "GUN",
       "appId": 2610,
       "players": 13,
-      "rank": 5053
+      "rank": 5054
     },
     {
       "name": "Call of Duty (2003)",
@@ -392,7 +392,7 @@
       "name": "Act of War: Direct Action",
       "appId": 2710,
       "players": 12,
-      "rank": 5228
+      "rank": 5229
     },
     {
       "name": "ThreadSpace: Hyperbol",
@@ -410,13 +410,13 @@
       "name": "X2: The Threat",
       "appId": 2800,
       "players": 7,
-      "rank": 6539
+      "rank": 6540
     },
     {
       "name": "X3: Reunion",
       "appId": 2810,
       "players": 8,
-      "rank": 6188
+      "rank": 6189
     },
     {
       "name": "X3: Terran Conflict",
@@ -434,13 +434,13 @@
       "name": "X Rebirth",
       "appId": 2870,
       "players": 7,
-      "rank": 6540
+      "rank": 6541
     },
     {
       "name": "Fleet Command",
       "appId": 2910,
       "players": 7,
-      "rank": 6541
+      "rank": 6542
     },
     {
       "name": "Sub Command",
@@ -458,13 +458,13 @@
       "name": "Call of Juarez",
       "appId": 3020,
       "players": 14,
-      "rank": 4920
+      "rank": 4921
     },
     {
       "name": "Men of War: Red Tide",
       "appId": 3130,
       "players": 10,
-      "rank": 5662
+      "rank": 5663
     },
     {
       "name": "King's Bounty: Armored Princess",
@@ -512,13 +512,13 @@
       "name": "Bejeweled Deluxe",
       "appId": 3350,
       "players": 7,
-      "rank": 6542
+      "rank": 6543
     },
     {
       "name": "Feeding Frenzy 2 Deluxe",
       "appId": 3390,
       "players": 11,
-      "rank": 5434
+      "rank": 5435
     },
     {
       "name": "Hammer Heads Deluxe",
