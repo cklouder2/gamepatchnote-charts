@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2025-09-20T15:58:42.284Z",
+    "timestamp": "2025-09-20T16:24:36.915Z",
     "totalGames": 19085,
     "totalPlayers": 5764047,
     "totalScanned": 86538,
-    "duration": 6.458,
+    "duration": 4.706,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -394885,7 +394885,7 @@
       "initialPrice": "999",
       "discount": "0",
       "tags": {
-        "Co-op": true
+        "Strategy": true
       },
       "source": "steamspy-tag",
       "rank": 18646
