@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2025-09-27T02:37:07.796Z",
+    "timestamp": "2025-09-27T03:16:19.014Z",
     "totalGames": 16761,
-    "totalPlayers": 1010524,
+    "totalPlayers": 1010528,
     "totalScanned": 83538,
-    "duration": 12.049,
+    "duration": 5.84,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -26,25 +26,25 @@
       "name": "Red Orchestra: Ostfront 41-45",
       "appId": 1200,
       "players": 1,
-      "rank": 11025
+      "rank": 11026
     },
     {
       "name": "SiN: Gold",
       "appId": 1313,
       "players": 2,
-      "rank": 8812
+      "rank": 8813
     },
     {
       "name": "Darwinia",
       "appId": 1500,
       "players": 2,
-      "rank": 8813
+      "rank": 8814
     },
     {
       "name": "Uplink",
       "appId": 1510,
       "players": 2,
-      "rank": 8814
+      "rank": 8815
     },
     {
       "name": "DEFCON",
@@ -56,7 +56,7 @@
       "name": "Multiwinia",
       "appId": 1530,
       "players": 1,
-      "rank": 11026
+      "rank": 11027
     },
     {
       "name": "Space Empires IV Deluxe",
@@ -122,7 +122,7 @@
       "name": "Final DOOM",
       "appId": 2290,
       "players": 1,
-      "rank": 11027
+      "rank": 11028
     },
     {
       "name": "DOOM II",
@@ -140,37 +140,37 @@
       "name": "Hexen: Beyond Heretic",
       "appId": 2360,
       "players": 3,
-      "rank": 7563
+      "rank": 7564
     },
     {
       "name": "Hexen: Deathkings of the Dark Citadel",
       "appId": 2370,
       "players": 1,
-      "rank": 11028
+      "rank": 11029
     },
     {
       "name": "Heretic: Shadow of the Serpent Riders",
       "appId": 2390,
       "players": 2,
-      "rank": 8815
+      "rank": 8816
     },
     {
       "name": "The Ship: Murder Party",
       "appId": 2400,
       "players": 3,
-      "rank": 7564
+      "rank": 7565
     },
     {
       "name": "The Ship: Single Player",
       "appId": 2420,
       "players": 1,
-      "rank": 11029
+      "rank": 11030
     },
     {
       "name": "Shadowgrounds",
       "appId": 2500,
       "players": 1,
-      "rank": 11030
+      "rank": 11031
     },
     {
       "name": "Vampire: The Masquerade - Bloodlines",
@@ -212,13 +212,13 @@
       "name": "ThreadSpace: Hyperbol",
       "appId": 2720,
       "players": 1,
-      "rank": 11031
+      "rank": 11032
     },
     {
       "name": "ARMA: Combat Operations",
       "appId": 2780,
       "players": 1,
-      "rank": 11032
+      "rank": 11033
     },
     {
       "name": "X2: The Threat",
@@ -260,7 +260,7 @@
       "name": "Sub Command",
       "appId": 2920,
       "players": 2,
-      "rank": 8816
+      "rank": 8817
     },
     {
       "name": "FlatOut 2",
@@ -290,7 +290,7 @@
       "name": "Safecracker: The Ultimate Puzzle Adventure",
       "appId": 3260,
       "players": 1,
-      "rank": 11033
+      "rank": 11034
     },
     {
       "name": "Bejeweled 2 Deluxe",
@@ -332,25 +332,25 @@
       "name": "Hammer Heads Deluxe",
       "appId": 3400,
       "players": 1,
-      "rank": 11034
+      "rank": 11035
     },
     {
       "name": "Heavy Weapon Deluxe",
       "appId": 3410,
       "players": 1,
-      "rank": 11035
+      "rank": 11036
     },
     {
       "name": "Iggle Pop Deluxe",
       "appId": 3420,
       "players": 2,
-      "rank": 8817
+      "rank": 8818
     },
     {
       "name": "Rocket Mania Deluxe",
       "appId": 3440,
       "players": 3,
-      "rank": 7565
+      "rank": 7566
     },
     {
       "name": "Typer Shark! Deluxe",
@@ -362,7 +362,7 @@
       "name": "Talismania Deluxe",
       "appId": 3460,
       "players": 1,
-      "rank": 11036
+      "rank": 11037
     },
     {
       "name": "Peggle Deluxe",
@@ -380,13 +380,13 @@
       "name": "Venice Deluxe",
       "appId": 3490,
       "players": 1,
-      "rank": 11037
+      "rank": 11038
     },
     {
       "name": "Mystery P.I. - The Lottery Ticket",
       "appId": 3500,
       "players": 3,
-      "rank": 7566
+      "rank": 7567
     },
     {
       "name": "Amazing Adventures The Lost Tomb",
@@ -398,13 +398,13 @@
       "name": "Mystery P.I. - The Vegas Heist",
       "appId": 3520,
       "players": 1,
-      "rank": 11038
+      "rank": 11039
     },
     {
       "name": "Amazing Adventures Around the World",
       "appId": 3530,
       "players": 3,
-      "rank": 7567
+      "rank": 7568
     },
     {
       "name": "Peggle Nights",
@@ -422,7 +422,7 @@
       "name": "Mystery P.I. - The New York Fortune",
       "appId": 3570,
       "players": 1,
-      "rank": 11039
+      "rank": 11040
     },
     {
       "name": "Escape Rosecliff Island",
@@ -464,7 +464,7 @@
       "name": "BloodRayne 2 (Legacy)",
       "appId": 3820,
       "players": 1,
-      "rank": 11040
+      "rank": 11041
     },
     {
       "name": "Psychonauts",
@@ -494,13 +494,13 @@
       "name": "City Life 2008",
       "appId": 4460,
       "players": 1,
-      "rank": 11041
+      "rank": 11042
     },
     {
       "name": "Full Spectrum Warrior",
       "appId": 4520,
       "players": 2,
-      "rank": 8818
+      "rank": 8819
     },
     {
       "name": "Warhammer 40,000: Dawn of War - Dark Crusade",
@@ -572,25 +572,25 @@
       "name": "The Dig",
       "appId": 6040,
       "players": 3,
-      "rank": 7568
+      "rank": 7569
     },
     {
       "name": "Thrillville: Off the Rails",
       "appId": 6080,
       "players": 3,
-      "rank": 7569
+      "rank": 7570
     },
     {
       "name": "Shank",
       "appId": 6120,
       "players": 2,
-      "rank": 8819
+      "rank": 8820
     },
     {
       "name": "Ghost Master",
       "appId": 6200,
       "players": 2,
-      "rank": 8820
+      "rank": 8821
     },
     {
       "name": "FlatOut",
@@ -602,13 +602,13 @@
       "name": "Making History: The Calm & the Storm",
       "appId": 6250,
       "players": 1,
-      "rank": 11042
+      "rank": 11043
     },
     {
       "name": "Dreamfall: The Longest Journey",
       "appId": 6300,
       "players": 2,
-      "rank": 8821
+      "rank": 8822
     }
   ]
 }
