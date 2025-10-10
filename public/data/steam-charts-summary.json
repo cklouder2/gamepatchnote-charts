@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2025-10-10T03:46:45.751Z",
+    "timestamp": "2025-10-10T03:55:34.781Z",
     "totalGames": 18932,
-    "totalPlayers": 5760430,
+    "totalPlayers": 5760725,
     "totalScanned": 86538,
-    "duration": 23.958,
+    "duration": 20.098,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -32,7 +32,7 @@
       "name": "Deathmatch Classic",
       "appId": 40,
       "players": 7,
-      "rank": 6529
+      "rank": 6528
     },
     {
       "name": "Half-Life: Opposing Force",
@@ -44,7 +44,7 @@
       "name": "Ricochet",
       "appId": 60,
       "players": 4,
-      "rank": 8077
+      "rank": 8076
     },
     {
       "name": "Half-Life",
@@ -236,13 +236,13 @@
       "name": "Space Empires V",
       "appId": 1690,
       "players": 4,
-      "rank": 8078
+      "rank": 8077
     },
     {
       "name": "Arx Fatalis",
       "appId": 1700,
       "players": 6,
-      "rank": 6900
+      "rank": 6899
     },
     {
       "name": "Source Filmmaker",
@@ -254,7 +254,7 @@
       "name": "Earth 2160",
       "appId": 1900,
       "players": 4,
-      "rank": 8079
+      "rank": 8078
     },
     {
       "name": "Two Worlds Epic Edition",
@@ -320,7 +320,7 @@
       "name": "Hexen: Beyond Heretic",
       "appId": 2360,
       "players": 3,
-      "rank": 8978
+      "rank": 8977
     },
     {
       "name": "Hexen: Deathkings of the Dark Citadel",
@@ -338,7 +338,7 @@
       "name": "The Ship: Murder Party",
       "appId": 2400,
       "players": 3,
-      "rank": 8979
+      "rank": 8978
     },
     {
       "name": "The Ship: Single Player",
@@ -410,7 +410,7 @@
       "name": "X2: The Threat",
       "appId": 2800,
       "players": 7,
-      "rank": 6530
+      "rank": 6529
     },
     {
       "name": "X3: Reunion",
@@ -428,19 +428,19 @@
       "name": "X: Beyond the Frontier",
       "appId": 2840,
       "players": 5,
-      "rank": 7425
+      "rank": 7424
     },
     {
       "name": "X Rebirth",
       "appId": 2870,
       "players": 7,
-      "rank": 6531
+      "rank": 6530
     },
     {
       "name": "Fleet Command",
       "appId": 2910,
       "players": 7,
-      "rank": 6532
+      "rank": 6531
     },
     {
       "name": "Sub Command",
@@ -512,7 +512,7 @@
       "name": "Bejeweled Deluxe",
       "appId": 3350,
       "players": 7,
-      "rank": 6533
+      "rank": 6532
     },
     {
       "name": "Big Money! Deluxe",
@@ -548,7 +548,7 @@
       "name": "Rocket Mania Deluxe",
       "appId": 3440,
       "players": 3,
-      "rank": 8980
+      "rank": 8979
     },
     {
       "name": "Typer Shark! Deluxe",
@@ -584,13 +584,13 @@
       "name": "Mystery P.I. - The Lottery Ticket",
       "appId": 3500,
       "players": 3,
-      "rank": 8981
+      "rank": 8980
     },
     {
       "name": "Amazing Adventures The Lost Tomb",
       "appId": 3510,
       "players": 4,
-      "rank": 8080
+      "rank": 8079
     },
     {
       "name": "Mystery P.I. - The Vegas Heist",
@@ -602,7 +602,7 @@
       "name": "Amazing Adventures Around the World",
       "appId": 3530,
       "players": 3,
-      "rank": 8982
+      "rank": 8981
     },
     {
       "name": "Peggle Nights",
