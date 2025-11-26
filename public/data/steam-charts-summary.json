@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2025-11-26T18:09:50.785Z",
+    "timestamp": "2025-11-26T18:23:06.706Z",
     "totalGames": 19059,
     "totalPlayers": 5764317,
     "totalScanned": 86541,
-    "duration": 16.971,
+    "duration": 4.706,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
