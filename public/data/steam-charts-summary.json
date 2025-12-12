@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2025-12-12T05:24:03.906Z",
-    "totalGames": 18671,
-    "totalPlayers": 5764033,
+    "timestamp": "2025-12-12T05:37:19.558Z",
+    "totalGames": 18744,
+    "totalPlayers": 5765139,
     "totalScanned": 86542,
-    "duration": 3.292,
+    "duration": 29.669,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -20,31 +20,31 @@
       "name": "Team Fortress Classic",
       "appId": 20,
       "players": 66,
-      "rank": 2418
+      "rank": 2420
     },
     {
       "name": "Day of Defeat",
       "appId": 30,
       "players": 87,
-      "rank": 2086
+      "rank": 2088
     },
     {
       "name": "Deathmatch Classic",
       "appId": 40,
       "players": 7,
-      "rank": 6478
+      "rank": 6500
     },
     {
       "name": "Half-Life: Opposing Force",
       "appId": 50,
       "players": 74,
-      "rank": 2275
+      "rank": 2277
     },
     {
       "name": "Ricochet",
       "appId": 60,
       "players": 4,
-      "rank": 8017
+      "rank": 8043
     },
     {
       "name": "Half-Life",
@@ -56,19 +56,19 @@
       "name": "Counter-Strike: Condition Zero",
       "appId": 80,
       "players": 276,
-      "rank": 1084
+      "rank": 1085
     },
     {
       "name": "Counter-Strike: Condition Zero",
       "appId": 100,
       "players": 83,
-      "rank": 2134
+      "rank": 2136
     },
     {
       "name": "Half-Life: Blue Shift",
       "appId": 130,
       "players": 35,
-      "rank": 3283
+      "rank": 3291
     },
     {
       "name": "Half-Life 2",
@@ -86,37 +86,37 @@
       "name": "Half-Life: Source",
       "appId": 280,
       "players": 27,
-      "rank": 3675
+      "rank": 3684
     },
     {
       "name": "Day of Defeat: Source",
       "appId": 300,
       "players": 238,
-      "rank": 1180
+      "rank": 1181
     },
     {
       "name": "Half-Life 2: Deathmatch",
       "appId": 320,
       "players": 159,
-      "rank": 1524
+      "rank": 1526
     },
     {
       "name": "Half-Life 2: Lost Coast",
       "appId": 340,
       "players": 2,
-      "rank": 10228
+      "rank": 10264
     },
     {
       "name": "Half-Life Deathmatch: Source",
       "appId": 360,
       "players": 43,
-      "rank": 2959
+      "rank": 2964
     },
     {
       "name": "Half-Life 2: Episode One",
       "appId": 380,
       "players": 18,
-      "rank": 4407
+      "rank": 4418
     },
     {
       "name": "Portal",
@@ -128,7 +128,7 @@
       "name": "Half-Life 2: Episode Two",
       "appId": 420,
       "players": 20,
-      "rank": 4223
+      "rank": 4234
     },
     {
       "name": "Team Fortress 2",
@@ -158,7 +158,7 @@
       "name": "Alien Swarm",
       "appId": 630,
       "players": 23,
-      "rank": 3962
+      "rank": 3972
     },
     {
       "name": "Counter-Strike: Global Offensive",
@@ -170,79 +170,79 @@
       "name": "Red Orchestra: Ostfront 41-45",
       "appId": 1200,
       "players": 1,
-      "rank": 12592
+      "rank": 12637
     },
     {
       "name": "Killing Floor",
       "appId": 1250,
       "players": 224,
-      "rank": 1223
+      "rank": 1224
     },
     {
       "name": "SiN: Gold",
       "appId": 1313,
       "players": 2,
-      "rank": 10229
+      "rank": 10265
     },
     {
       "name": "Darwinia",
       "appId": 1500,
       "players": 2,
-      "rank": 10230
+      "rank": 10266
     },
     {
       "name": "Uplink",
       "appId": 1510,
       "players": 2,
-      "rank": 10231
+      "rank": 10267
     },
     {
       "name": "DEFCON",
       "appId": 1520,
       "players": 8,
-      "rank": 6134
+      "rank": 6151
     },
     {
       "name": "Multiwinia",
       "appId": 1530,
       "players": 1,
-      "rank": 12593
+      "rank": 12638
     },
     {
       "name": "Dangerous Waters",
       "appId": 1600,
       "players": 2,
-      "rank": 10232
+      "rank": 10268
     },
     {
       "name": "Space Empires IV Deluxe",
       "appId": 1610,
       "players": 21,
-      "rank": 4132
+      "rank": 4143
     },
     {
       "name": "Disciples II: Rise of the Elves ",
       "appId": 1630,
       "players": 35,
-      "rank": 3284
+      "rank": 3292
     },
     {
       "name": "Disciples II: Gallean's Return",
       "appId": 1640,
       "players": 30,
-      "rank": 3509
+      "rank": 3518
     },
     {
       "name": "Space Empires V",
       "appId": 1690,
       "players": 4,
-      "rank": 8018
+      "rank": 8044
     },
     {
       "name": "Arx Fatalis",
       "appId": 1700,
       "players": 6,
-      "rank": 6842
+      "rank": 6864
     },
     {
       "name": "Source Filmmaker",
@@ -254,253 +254,253 @@
       "name": "Earth 2160",
       "appId": 1900,
       "players": 4,
-      "rank": 8019
+      "rank": 8045
     },
     {
       "name": "Two Worlds Epic Edition",
       "appId": 1930,
       "players": 17,
-      "rank": 4508
+      "rank": 4519
     },
     {
       "name": "Dark Messiah of Might & Magic",
       "appId": 2100,
       "players": 45,
-      "rank": 2888
+      "rank": 2892
     },
     {
       "name": "Quake III Arena",
       "appId": 2200,
       "players": 17,
-      "rank": 4509
+      "rank": 4520
     },
     {
       "name": "Quake 4",
       "appId": 2210,
       "players": 18,
-      "rank": 4408
+      "rank": 4419
     },
     {
       "name": "Wolfenstein 3D",
       "appId": 2270,
       "players": 10,
-      "rank": 5616
+      "rank": 5629
     },
     {
       "name": "DOOM + DOOM II",
       "appId": 2280,
       "players": 345,
-      "rank": 961
+      "rank": 962
     },
     {
       "name": "Final DOOM",
       "appId": 2290,
       "players": 1,
-      "rank": 12594
+      "rank": 12639
     },
     {
       "name": "DOOM II",
       "appId": 2300,
       "players": 16,
-      "rank": 4623
+      "rank": 4634
     },
     {
       "name": "Quake",
       "appId": 2310,
       "players": 82,
-      "rank": 2148
+      "rank": 2150
     },
     {
       "name": "Quake II",
       "appId": 2320,
       "players": 80,
-      "rank": 2177
+      "rank": 2179
     },
     {
       "name": "Hexen: Beyond Heretic",
       "appId": 2360,
       "players": 3,
-      "rank": 8900
+      "rank": 8930
     },
     {
       "name": "Hexen: Deathkings of the Dark Citadel",
       "appId": 2370,
       "players": 1,
-      "rank": 12595
+      "rank": 12640
     },
     {
       "name": "Heretic: Shadow of the Serpent Riders",
       "appId": 2390,
       "players": 2,
-      "rank": 10233
+      "rank": 10269
     },
     {
       "name": "The Ship: Murder Party",
       "appId": 2400,
       "players": 3,
-      "rank": 8901
+      "rank": 8931
     },
     {
       "name": "The Ship: Single Player",
       "appId": 2420,
       "players": 1,
-      "rank": 12596
+      "rank": 12641
     },
     {
       "name": "Shadowgrounds",
       "appId": 2500,
       "players": 1,
-      "rank": 12597
+      "rank": 12642
     },
     {
       "name": "Vampire: The Masquerade - Bloodlines",
       "appId": 2600,
       "players": 104,
-      "rank": 1884
+      "rank": 1886
     },
     {
       "name": "GUN",
       "appId": 2610,
       "players": 13,
-      "rank": 5019
+      "rank": 5031
     },
     {
       "name": "Call of Duty (2003)",
       "appId": 2620,
       "players": 60,
-      "rank": 2524
+      "rank": 2526
     },
     {
       "name": "Call of Duty 2",
       "appId": 2630,
       "players": 162,
-      "rank": 1502
+      "rank": 1504
     },
     {
       "name": "Call of Duty: United Offensive",
       "appId": 2640,
       "players": 17,
-      "rank": 4510
+      "rank": 4521
     },
     {
       "name": "RollerCoaster Tycoon 3: Platinum",
       "appId": 2700,
       "players": 32,
-      "rank": 3409
+      "rank": 3418
     },
     {
       "name": "Act of War: Direct Action",
       "appId": 2710,
       "players": 12,
-      "rank": 5189
+      "rank": 5201
     },
     {
       "name": "ThreadSpace: Hyperbol",
       "appId": 2720,
       "players": 1,
-      "rank": 12598
+      "rank": 12643
     },
     {
       "name": "ARMA: Combat Operations",
       "appId": 2780,
       "players": 1,
-      "rank": 12599
+      "rank": 12644
     },
     {
       "name": "X2: The Threat",
       "appId": 2800,
       "players": 7,
-      "rank": 6479
+      "rank": 6501
     },
     {
       "name": "X3: Reunion",
       "appId": 2810,
       "players": 8,
-      "rank": 6135
+      "rank": 6152
     },
     {
       "name": "X3: Terran Conflict",
       "appId": 2820,
       "players": 32,
-      "rank": 3410
+      "rank": 3419
     },
     {
       "name": "X: Beyond the Frontier",
       "appId": 2840,
       "players": 5,
-      "rank": 7363
+      "rank": 7387
     },
     {
       "name": "X Rebirth",
       "appId": 2870,
       "players": 7,
-      "rank": 6480
+      "rank": 6502
     },
     {
       "name": "Fleet Command",
       "appId": 2910,
       "players": 7,
-      "rank": 6481
+      "rank": 6503
     },
     {
       "name": "Sub Command",
       "appId": 2920,
       "players": 2,
-      "rank": 10234
+      "rank": 10270
     },
     {
       "name": "FlatOut 2",
       "appId": 2990,
       "players": 85,
-      "rank": 2111
+      "rank": 2113
     },
     {
       "name": "Call of Juarez",
       "appId": 3020,
       "players": 14,
-      "rank": 4888
+      "rank": 4900
     },
     {
       "name": "Men of War: Red Tide",
       "appId": 3130,
       "players": 10,
-      "rank": 5617
+      "rank": 5630
     },
     {
       "name": "King's Bounty: Armored Princess",
       "appId": 3170,
       "players": 47,
-      "rank": 2832
+      "rank": 2836
     },
     {
       "name": "Safecracker: The Ultimate Puzzle Adventure",
       "appId": 3260,
       "players": 1,
-      "rank": 12600
+      "rank": 12645
     },
     {
       "name": "Painkiller Overdose",
       "appId": 3270,
       "players": 2,
-      "rank": 10235
+      "rank": 10271
     },
     {
       "name": "Bejeweled 2 Deluxe",
       "appId": 3300,
       "players": 41,
-      "rank": 3036
+      "rank": 3042
     },
     {
       "name": "Chuzzle Deluxe",
       "appId": 3310,
       "players": 66,
-      "rank": 2419
+      "rank": 2421
     },
     {
       "name": "Insaniquarium Deluxe",
       "appId": 3320,
       "players": 60,
-      "rank": 2525
+      "rank": 2527
     },
     {
       "name": "Zuma Deluxe",
@@ -512,103 +512,103 @@
       "name": "Bejeweled Deluxe",
       "appId": 3350,
       "players": 7,
-      "rank": 6482
+      "rank": 6504
     },
     {
       "name": "Big Money! Deluxe",
       "appId": 3360,
       "players": 8,
-      "rank": 6136
+      "rank": 6153
     },
     {
       "name": "Feeding Frenzy 2 Deluxe",
       "appId": 3390,
       "players": 11,
-      "rank": 5392
+      "rank": 5405
     },
     {
       "name": "Hammer Heads Deluxe",
       "appId": 3400,
       "players": 1,
-      "rank": 12601
+      "rank": 12646
     },
     {
       "name": "Heavy Weapon Deluxe",
       "appId": 3410,
       "players": 1,
-      "rank": 12602
+      "rank": 12647
     },
     {
       "name": "Iggle Pop Deluxe",
       "appId": 3420,
       "players": 2,
-      "rank": 10236
+      "rank": 10272
     },
     {
       "name": "Rocket Mania Deluxe",
       "appId": 3440,
       "players": 3,
-      "rank": 8902
+      "rank": 8932
     },
     {
       "name": "Typer Shark! Deluxe",
       "appId": 3450,
       "players": 25,
-      "rank": 3816
+      "rank": 3825
     },
     {
       "name": "Talismania Deluxe",
       "appId": 3460,
       "players": 1,
-      "rank": 12603
+      "rank": 12648
     },
     {
       "name": "Peggle Deluxe",
       "appId": 3480,
       "players": 291,
-      "rank": 1049
+      "rank": 1050
     },
     {
       "name": "Peggle Extreme",
       "appId": 3483,
       "players": 21,
-      "rank": 4133
+      "rank": 4144
     },
     {
       "name": "Venice Deluxe",
       "appId": 3490,
       "players": 1,
-      "rank": 12604
+      "rank": 12649
     },
     {
       "name": "Amazing Adventures The Lost Tomb",
       "appId": 3510,
       "players": 4,
-      "rank": 8020
+      "rank": 8046
     },
     {
       "name": "Mystery P.I. - The Vegas Heist",
       "appId": 3520,
       "players": 1,
-      "rank": 12605
+      "rank": 12650
     },
     {
       "name": "Amazing Adventures Around the World",
       "appId": 3530,
       "players": 3,
-      "rank": 8903
+      "rank": 8933
     },
     {
       "name": "Peggle Nights",
       "appId": 3540,
       "players": 103,
-      "rank": 1891
+      "rank": 1893
     },
     {
       "name": "Bejeweled Twist",
       "appId": 3560,
       "players": 16,
-      "rank": 4624
+      "rank": 4635
     }
   ]
 }
