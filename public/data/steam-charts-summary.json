@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2026-01-20T05:55:15.637Z",
-    "totalGames": 18969,
-    "totalPlayers": 5767054,
+    "timestamp": "2026-01-20T06:06:24.920Z",
+    "totalGames": 18964,
+    "totalPlayers": 5767048,
     "totalScanned": 86542,
-    "duration": 28.632,
+    "duration": 10.267,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -170,7 +170,7 @@
       "name": "Red Orchestra: Ostfront 41-45",
       "appId": 1200,
       "players": 1,
-      "rank": 12774
+      "rank": 12773
     },
     {
       "name": "Killing Floor",
@@ -206,7 +206,7 @@
       "name": "Multiwinia",
       "appId": 1530,
       "players": 1,
-      "rank": 12775
+      "rank": 12774
     },
     {
       "name": "Dangerous Waters",
@@ -296,7 +296,7 @@
       "name": "Final DOOM",
       "appId": 2290,
       "players": 1,
-      "rank": 12776
+      "rank": 12775
     },
     {
       "name": "DOOM II",
@@ -326,7 +326,7 @@
       "name": "Hexen: Deathkings of the Dark Citadel",
       "appId": 2370,
       "players": 1,
-      "rank": 12777
+      "rank": 12776
     },
     {
       "name": "Heretic: Shadow of the Serpent Riders",
@@ -344,13 +344,13 @@
       "name": "The Ship: Single Player",
       "appId": 2420,
       "players": 1,
-      "rank": 12778
+      "rank": 12777
     },
     {
       "name": "Shadowgrounds",
       "appId": 2500,
       "players": 1,
-      "rank": 12779
+      "rank": 12778
     },
     {
       "name": "Vampire: The Masquerade - Bloodlines",
@@ -398,13 +398,13 @@
       "name": "ThreadSpace: Hyperbol",
       "appId": 2720,
       "players": 1,
-      "rank": 12780
+      "rank": 12779
     },
     {
       "name": "ARMA: Combat Operations",
       "appId": 2780,
       "players": 1,
-      "rank": 12781
+      "rank": 12780
     },
     {
       "name": "X2: The Threat",
@@ -476,7 +476,7 @@
       "name": "Safecracker: The Ultimate Puzzle Adventure",
       "appId": 3260,
       "players": 1,
-      "rank": 12782
+      "rank": 12781
     },
     {
       "name": "Painkiller Overdose",
@@ -530,13 +530,13 @@
       "name": "Hammer Heads Deluxe",
       "appId": 3400,
       "players": 1,
-      "rank": 12783
+      "rank": 12782
     },
     {
       "name": "Heavy Weapon Deluxe",
       "appId": 3410,
       "players": 1,
-      "rank": 12784
+      "rank": 12783
     },
     {
       "name": "Iggle Pop Deluxe",
@@ -560,7 +560,7 @@
       "name": "Talismania Deluxe",
       "appId": 3460,
       "players": 1,
-      "rank": 12785
+      "rank": 12784
     },
     {
       "name": "Peggle Deluxe",
@@ -578,7 +578,7 @@
       "name": "Venice Deluxe",
       "appId": 3490,
       "players": 1,
-      "rank": 12786
+      "rank": 12785
     },
     {
       "name": "Amazing Adventures The Lost Tomb",
@@ -590,7 +590,7 @@
       "name": "Mystery P.I. - The Vegas Heist",
       "appId": 3520,
       "players": 1,
-      "rank": 12787
+      "rank": 12786
     },
     {
       "name": "Amazing Adventures Around the World",
