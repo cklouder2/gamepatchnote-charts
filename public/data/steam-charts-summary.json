@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2026-01-25T01:23:22.500Z",
-    "totalGames": 13665,
-    "totalPlayers": 5529305,
+    "timestamp": "2026-01-25T02:12:34.057Z",
+    "totalGames": 10759,
+    "totalPlayers": 5361615,
     "totalScanned": 0,
-    "duration": 2.132,
+    "duration": 2.828,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -14,121 +14,121 @@
       "name": "Counter-Strike",
       "appId": 10,
       "players": 7323,
-      "rank": 115
+      "rank": 112
     },
     {
       "name": "Team Fortress Classic",
       "appId": 20,
       "players": 66,
-      "rank": 2163
+      "rank": 1902
     },
     {
       "name": "Day of Defeat",
       "appId": 30,
       "players": 87,
-      "rank": 1889
+      "rank": 1679
     },
     {
       "name": "Deathmatch Classic",
       "appId": 40,
       "players": 7,
-      "rank": 5334
+      "rank": 4406
     },
     {
       "name": "Half-Life: Opposing Force",
       "appId": 50,
       "players": 74,
-      "rank": 2044
+      "rank": 1806
     },
     {
       "name": "Ricochet",
       "appId": 60,
       "players": 4,
-      "rank": 6457
+      "rank": 5269
     },
     {
       "name": "Half-Life",
       "appId": 70,
       "players": 634,
-      "rank": 611
+      "rank": 568
     },
     {
       "name": "Counter-Strike: Condition Zero",
       "appId": 80,
       "players": 276,
-      "rank": 1007
+      "rank": 923
     },
     {
       "name": "Counter-Strike: Condition Zero",
       "appId": 100,
       "players": 83,
-      "rank": 1931
+      "rank": 1709
     },
     {
       "name": "Half-Life: Blue Shift",
       "appId": 130,
       "players": 35,
-      "rank": 2874
+      "rank": 2475
     },
     {
       "name": "Half-Life 2",
       "appId": 220,
       "players": 1555,
-      "rank": 343
+      "rank": 323
     },
     {
       "name": "Counter-Strike: Source",
       "appId": 240,
       "players": 6187,
-      "rank": 131
+      "rank": 127
     },
     {
       "name": "Half-Life: Source",
       "appId": 280,
       "players": 27,
-      "rank": 3191
+      "rank": 2727
     },
     {
       "name": "Day of Defeat: Source",
       "appId": 300,
       "players": 238,
-      "rank": 1092
+      "rank": 998
     },
     {
       "name": "Half-Life 2: Deathmatch",
       "appId": 320,
       "players": 159,
-      "rank": 1406
+      "rank": 1271
     },
     {
       "name": "Half-Life 2: Lost Coast",
       "appId": 340,
       "players": 2,
-      "rank": 8040
+      "rank": 6429
     },
     {
       "name": "Half-Life Deathmatch: Source",
       "appId": 360,
       "players": 43,
-      "rank": 2622
+      "rank": 2275
     },
     {
       "name": "Half-Life 2: Episode One",
       "appId": 380,
       "players": 18,
-      "rank": 3763
+      "rank": 3187
     },
     {
       "name": "Portal",
       "appId": 400,
       "players": 638,
-      "rank": 607
+      "rank": 564
     },
     {
       "name": "Half-Life 2: Episode Two",
       "appId": 420,
       "players": 20,
-      "rank": 3607
+      "rank": 3062
     },
     {
       "name": "Team Fortress 2",
@@ -140,7 +140,7 @@
       "name": "Left 4 Dead",
       "appId": 500,
       "players": 774,
-      "rank": 538
+      "rank": 500
     },
     {
       "name": "Left 4 Dead 2",
@@ -152,13 +152,13 @@
       "name": "Portal 2",
       "appId": 620,
       "players": 1959,
-      "rank": 293
+      "rank": 282
     },
     {
       "name": "Alien Swarm",
       "appId": 630,
       "players": 23,
-      "rank": 3411
+      "rank": 2907
     },
     {
       "name": "Counter-Strike: Global Offensive",
@@ -170,445 +170,445 @@
       "name": "Red Orchestra: Ostfront 41-45",
       "appId": 1200,
       "players": 1,
-      "rank": 9682
+      "rank": 7672
     },
     {
       "name": "Killing Floor",
       "appId": 1250,
       "players": 224,
-      "rank": 1134
+      "rank": 1035
     },
     {
       "name": "SiN Gold",
       "appId": 1313,
       "players": 2,
-      "rank": 8041
+      "rank": 6430
     },
     {
       "name": "Darwinia",
       "appId": 1500,
       "players": 2,
-      "rank": 8042
-    },
-    {
-      "name": "Uplink",
-      "appId": 1510,
-      "players": 2,
-      "rank": 8043
+      "rank": 6431
     },
     {
       "name": "DEFCON",
       "appId": 1520,
       "players": 8,
-      "rank": 5068
+      "rank": 4202
     },
     {
       "name": "Multiwinia",
       "appId": 1530,
       "players": 1,
-      "rank": 9683
+      "rank": 7673
     },
     {
       "name": "Dangerous Waters",
       "appId": 1600,
       "players": 2,
-      "rank": 8044
-    },
-    {
-      "name": "Space Empires IV Deluxe",
-      "appId": 1610,
-      "players": 21,
-      "rank": 3537
-    },
-    {
-      "name": "Disciples II: Rise of the Elves ",
-      "appId": 1630,
-      "players": 35,
-      "rank": 2875
+      "rank": 6432
     },
     {
       "name": "Disciples II: Gallean's Return",
       "appId": 1640,
       "players": 30,
-      "rank": 3062
+      "rank": 2623
     },
     {
       "name": "Space Empires V",
       "appId": 1690,
       "players": 4,
-      "rank": 6458
+      "rank": 5270
     },
     {
       "name": "Arx Fatalis",
       "appId": 1700,
       "players": 6,
-      "rank": 5612
+      "rank": 4612
     },
     {
       "name": "Source Filmmaker",
       "appId": 1840,
       "players": 1047,
-      "rank": 446
+      "rank": 417
     },
     {
       "name": "Earth 2160",
       "appId": 1900,
       "players": 4,
-      "rank": 6459
+      "rank": 5271
     },
     {
       "name": "Two Worlds Epic Edition",
       "appId": 1930,
       "players": 17,
-      "rank": 3835
+      "rank": 3248
     },
     {
       "name": "Dark Messiah of Might & Magic",
       "appId": 2100,
       "players": 45,
-      "rank": 2558
+      "rank": 2220
     },
     {
       "name": "Quake III Arena",
       "appId": 2200,
       "players": 17,
-      "rank": 3836
+      "rank": 3249
     },
     {
       "name": "Quake 4",
       "appId": 2210,
       "players": 18,
-      "rank": 3764
+      "rank": 3188
     },
     {
       "name": "Wolfenstein 3D",
       "appId": 2270,
       "players": 10,
-      "rank": 4681
+      "rank": 3907
     },
     {
       "name": "DOOM + DOOM II",
       "appId": 2280,
       "players": 345,
-      "rank": 895
+      "rank": 823
     },
     {
       "name": "Final DOOM",
       "appId": 2290,
       "players": 1,
-      "rank": 9684
+      "rank": 7674
     },
     {
       "name": "DOOM II",
       "appId": 2300,
       "players": 16,
-      "rank": 3922
+      "rank": 3320
     },
     {
       "name": "Quake",
       "appId": 2310,
       "players": 82,
-      "rank": 1944
+      "rank": 1721
     },
     {
       "name": "Quake II",
       "appId": 2320,
       "players": 80,
-      "rank": 1965
+      "rank": 1738
     },
     {
       "name": "Hexen: Beyond Heretic",
       "appId": 2360,
       "players": 3,
-      "rank": 7098
+      "rank": 5731
     },
     {
       "name": "Hexen: Deathkings of the Dark Citadel",
       "appId": 2370,
       "players": 1,
-      "rank": 9685
+      "rank": 7675
     },
     {
       "name": "Heretic: Shadow of the Serpent Riders",
       "appId": 2390,
       "players": 2,
-      "rank": 8045
+      "rank": 6433
     },
     {
       "name": "The Ship: Murder Party",
       "appId": 2400,
       "players": 3,
-      "rank": 7099
+      "rank": 5732
     },
     {
       "name": "The Ship: Single Player",
       "appId": 2420,
       "players": 1,
-      "rank": 9686
+      "rank": 7676
     },
     {
       "name": "Shadowgrounds",
       "appId": 2500,
       "players": 1,
-      "rank": 9687
+      "rank": 7677
     },
     {
       "name": "Vampire: The Masquerade - Bloodlines",
       "appId": 2600,
       "players": 104,
-      "rank": 1720
+      "rank": 1536
     },
     {
       "name": "GUN",
       "appId": 2610,
       "players": 13,
-      "rank": 4230
+      "rank": 3559
     },
     {
       "name": "Call of Duty (2003)",
       "appId": 2620,
       "players": 60,
-      "rank": 2262
+      "rank": 1987
     },
     {
       "name": "Call of Duty 2",
       "appId": 2630,
       "players": 162,
-      "rank": 1384
+      "rank": 1251
     },
     {
       "name": "Call of Duty: United Offensive",
       "appId": 2640,
       "players": 17,
-      "rank": 3837
+      "rank": 3250
     },
     {
       "name": "RollerCoaster Tycoon 3: Platinum",
       "appId": 2700,
       "players": 32,
-      "rank": 2977
+      "rank": 2558
     },
     {
       "name": "Act of War: Direct Action",
       "appId": 2710,
       "players": 12,
-      "rank": 4368
+      "rank": 3670
     },
     {
       "name": "ThreadSpace: Hyperbol",
       "appId": 2720,
       "players": 1,
-      "rank": 9688
+      "rank": 7678
     },
     {
       "name": "ARMA: Combat Operations",
       "appId": 2780,
       "players": 1,
-      "rank": 9689
+      "rank": 7679
     },
     {
       "name": "X2: The Threat",
       "appId": 2800,
       "players": 7,
-      "rank": 5335
+      "rank": 4407
     },
     {
       "name": "X3: Reunion",
       "appId": 2810,
       "players": 8,
-      "rank": 5069
+      "rank": 4203
     },
     {
       "name": "X3: Terran Conflict",
       "appId": 2820,
       "players": 32,
-      "rank": 2978
+      "rank": 2559
     },
     {
       "name": "X: Beyond the Frontier",
       "appId": 2840,
       "players": 5,
-      "rank": 5993
+      "rank": 4913
     },
     {
       "name": "X Rebirth",
       "appId": 2870,
       "players": 7,
-      "rank": 5336
-    },
-    {
-      "name": "Fleet Command",
-      "appId": 2910,
-      "players": 7,
-      "rank": 5337
+      "rank": 4408
     },
     {
       "name": "Sub Command",
       "appId": 2920,
       "players": 2,
-      "rank": 8046
+      "rank": 6434
     },
     {
       "name": "FlatOut 2",
       "appId": 2990,
       "players": 85,
-      "rank": 1912
+      "rank": 1695
     },
     {
       "name": "Call of Juarez",
       "appId": 3020,
       "players": 14,
-      "rank": 4121
-    },
-    {
-      "name": "Men of War: Red Tide",
-      "appId": 3130,
-      "players": 10,
-      "rank": 4682
-    },
-    {
-      "name": "King's Bounty: Armored Princess",
-      "appId": 3170,
-      "players": 47,
-      "rank": 2517
+      "rank": 3473
     },
     {
       "name": "Painkiller Overdose",
       "appId": 3270,
       "players": 2,
-      "rank": 8047
+      "rank": 6435
     },
     {
       "name": "Insaniquarium Deluxe",
       "appId": 3320,
       "players": 60,
-      "rank": 2263
+      "rank": 1988
     },
     {
       "name": "Zuma Deluxe",
       "appId": 3330,
       "players": 658,
-      "rank": 591
+      "rank": 548
     },
     {
       "name": "Feeding Frenzy 2 Deluxe",
       "appId": 3390,
       "players": 11,
-      "rank": 4527
+      "rank": 3793
     },
     {
       "name": "Heavy Weapon Deluxe",
       "appId": 3410,
       "players": 1,
-      "rank": 9690
+      "rank": 7680
     },
     {
       "name": "Peggle Deluxe",
       "appId": 3480,
       "players": 291,
-      "rank": 975
+      "rank": 896
     },
     {
       "name": "Peggle Extreme",
       "appId": 3483,
       "players": 21,
-      "rank": 3538
-    },
-    {
-      "name": "Peggle Nights",
-      "appId": 3540,
-      "players": 103,
-      "rank": 1727
-    },
-    {
-      "name": "Bejeweled Twist",
-      "appId": 3560,
-      "players": 16,
-      "rank": 3923
+      "rank": 3009
     },
     {
       "name": "Plants vs. Zombies GOTY Edition",
       "appId": 3590,
       "players": 2656,
-      "rank": 238
+      "rank": 229
     },
     {
       "name": "Zuma's Revenge!",
       "appId": 3620,
       "players": 205,
-      "rank": 1194
+      "rank": 1088
     },
     {
       "name": "Sniper Elite",
       "appId": 3700,
       "players": 21,
-      "rank": 3539
+      "rank": 3010
     },
     {
       "name": "Judge Dredd: Dredd vs. Death",
       "appId": 3710,
       "players": 3,
-      "rank": 7100
-    },
-    {
-      "name": "Evil Genius",
-      "appId": 3720,
-      "players": 13,
-      "rank": 4231
+      "rank": 5733
     },
     {
       "name": "Aliens versus Predator Classic 2000",
       "appId": 3730,
       "players": 7,
-      "rank": 5338
+      "rank": 4409
     },
     {
       "name": "BloodRayne 2 (Legacy)",
       "appId": 3820,
       "players": 1,
-      "rank": 9691
+      "rank": 7681
     },
     {
       "name": "Psychonauts",
       "appId": 3830,
       "players": 56,
-      "rank": 2337
+      "rank": 2050
     },
     {
       "name": "Sid Meier's Civilization IV",
       "appId": 3900,
       "players": 620,
-      "rank": 617
+      "rank": 574
     },
     {
       "name": "Sid Meier's Civilization III Complete",
       "appId": 3910,
       "players": 1383,
-      "rank": 377
+      "rank": 353
     },
     {
       "name": "Sid Meier's Pirates!",
       "appId": 3920,
       "players": 108,
-      "rank": 1689
-    },
-    {
-      "name": "CivCity: Rome",
-      "appId": 3980,
-      "players": 8,
-      "rank": 5070
+      "rank": 1511
     },
     {
       "name": "Civilization IV: Warlords",
       "appId": 3990,
       "players": 144,
-      "rank": 1470
+      "rank": 1328
     },
     {
       "name": "Garry's Mod",
       "appId": 4000,
       "players": 18400,
       "rank": 47
+    },
+    {
+      "name": "S.T.A.L.K.E.R.: Shadow of Chernobyl",
+      "appId": 4500,
+      "players": 185,
+      "rank": 1157
+    },
+    {
+      "name": "Full Spectrum Warrior",
+      "appId": 4520,
+      "players": 2,
+      "rank": 6436
+    },
+    {
+      "name": "Company of Heroes - Legacy Edition",
+      "appId": 4560,
+      "players": 65,
+      "rank": 1917
+    },
+    {
+      "name": "Warhammer 40,000: Dawn of War - Anniversary Edition",
+      "appId": 4570,
+      "players": 76,
+      "rank": 1778
+    },
+    {
+      "name": "Warhammer 40,000: Dawn of War - Dark Crusade",
+      "appId": 4580,
+      "players": 236,
+      "rank": 1004
+    },
+    {
+      "name": "Total War: MEDIEVAL II – Definitive Edition",
+      "appId": 4700,
+      "players": 2814,
+      "rank": 219
+    },
+    {
+      "name": "Condemned: Criminal Origins",
+      "appId": 4720,
+      "players": 6,
+      "rank": 4613
+    },
+    {
+      "name": "Rome: Total War - Collection",
+      "appId": 4760,
+      "players": 552,
+      "rank": 627
+    },
+    {
+      "name": "Rome: Total War - Alexander",
+      "appId": 4770,
+      "players": 18,
+      "rank": 3189
+    },
+    {
+      "name": "Heroes of Annihilated Empires",
+      "appId": 4800,
+      "players": 4,
+      "rank": 5272
     }
   ]
 }
