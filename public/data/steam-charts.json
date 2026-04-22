@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2026-04-22T00:57:55.512Z",
+    "timestamp": "2026-04-22T01:43:08.807Z",
     "totalGames": 19075,
     "totalPlayers": 5766854,
     "totalScanned": 86543,
-    "duration": 17.457,
+    "duration": 24.03,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -290823,7 +290823,7 @@
       "initialPrice": "699",
       "discount": "0",
       "tags": {
-        "Survival": true
+        "Strategy": true
       },
       "source": "steamspy-tag",
       "rank": 16937
@@ -295565,7 +295565,7 @@
       "initialPrice": "499",
       "discount": "0",
       "tags": {
-        "Survival": true
+        "RPG": true
       },
       "source": "steamspy-tag",
       "rank": 17008
