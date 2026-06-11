@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "timestamp": "2026-06-11T02:24:10.657Z",
-    "totalGames": 18704,
-    "totalPlayers": 5766497,
+    "timestamp": "2026-06-11T03:45:14.751Z",
+    "totalGames": 18705,
+    "totalPlayers": 5766662,
     "totalScanned": 86544,
-    "duration": 13.564,
+    "duration": 58.001,
     "source": "steamspy-comprehensive",
     "version": "3.0.0",
     "requirement": "Minimum 10000 games - MET ✅"
@@ -44,7 +44,7 @@
       "name": "Ricochet",
       "appId": 60,
       "players": 4,
-      "rank": 8012
+      "rank": 8013
     },
     {
       "name": "Half-Life",
@@ -236,13 +236,13 @@
       "name": "Space Empires V",
       "appId": 1690,
       "players": 4,
-      "rank": 8013
+      "rank": 8014
     },
     {
       "name": "Arx Fatalis",
       "appId": 1700,
       "players": 6,
-      "rank": 6847
+      "rank": 6848
     },
     {
       "name": "Source Filmmaker",
@@ -254,7 +254,7 @@
       "name": "Earth 2160",
       "appId": 1900,
       "players": 4,
-      "rank": 8014
+      "rank": 8015
     },
     {
       "name": "Two Worlds Epic Edition",
@@ -320,7 +320,7 @@
       "name": "Hexen: Beyond Heretic",
       "appId": 2360,
       "players": 3,
-      "rank": 8899
+      "rank": 8900
     },
     {
       "name": "Hexen: Deathkings of the Dark Citadel",
@@ -338,7 +338,7 @@
       "name": "The Ship: Murder Party",
       "appId": 2400,
       "players": 3,
-      "rank": 8900
+      "rank": 8901
     },
     {
       "name": "The Ship: Single Player",
@@ -428,7 +428,7 @@
       "name": "X: Beyond the Frontier",
       "appId": 2840,
       "players": 5,
-      "rank": 7365
+      "rank": 7366
     },
     {
       "name": "X Rebirth",
@@ -542,7 +542,7 @@
       "name": "Rocket Mania Deluxe",
       "appId": 3440,
       "players": 3,
-      "rank": 8901
+      "rank": 8902
     },
     {
       "name": "Typer Shark! Deluxe",
@@ -572,13 +572,13 @@
       "name": "Mystery P.I. - The Lottery Ticket",
       "appId": 3500,
       "players": 3,
-      "rank": 8902
+      "rank": 8903
     },
     {
       "name": "Amazing Adventures The Lost Tomb",
       "appId": 3510,
       "players": 4,
-      "rank": 8015
+      "rank": 8016
     },
     {
       "name": "Mystery P.I. - The Vegas Heist",
@@ -590,7 +590,7 @@
       "name": "Amazing Adventures Around the World",
       "appId": 3530,
       "players": 3,
-      "rank": 8903
+      "rank": 8904
     },
     {
       "name": "Peggle Nights",
